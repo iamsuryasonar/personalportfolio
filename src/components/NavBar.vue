@@ -3,7 +3,7 @@
     <div class="nav-wrapper">
       <div class="namediv">
         <a href="#frontpage">
-          <p class="name">
+          <p @click="menu = !menu" class="name">
             Surya Sonar
           </p>
         </a>
