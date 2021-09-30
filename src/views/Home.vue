@@ -41,7 +41,6 @@
       </div>
     </div>
   </div>
-  <!-- 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 -->
   <div class="third">
     <div id="projectsection" class="projectcontainer">
       <header><p>My Projects</p></header>
