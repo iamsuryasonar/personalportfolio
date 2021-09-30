@@ -41,6 +41,7 @@
       </div>
     </div>
   </div>
+  <!-- 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 -->
   <div class="third">
     <div id="projectsection" class="projectcontainer">
       <header><p>My Projects</p></header>
@@ -288,7 +289,7 @@ body {
   color: #f1f1f1;
 }
 .aboutmetitle{
-  margin-top: 3.5rem;
+  margin-top: 4rem;
 }
 .aboutmewrapper {
   margin-left: 2rem;
@@ -336,7 +337,7 @@ blockquote {
   align-items: center;
 }
 .projectcontainer header p {
-  margin-top: 3.5rem;
+  margin-top: 4rem;
   font-family: "Short Stack", cursive;
   font-size: 3rem;
   border-bottom: 2px solid yellow;
@@ -420,7 +421,7 @@ blockquote {
   justify-content: center;
 }
 .contact-icons {
-  margin-top: 10%;
+  margin-top: 15%;
   display: flex;
   flex-direction: row;
   font-size: 30px;
