@@ -1,10 +1,12 @@
 <template>
   <nav id="navbar">
     <div class="nav-wrapper">
-      <div>
-        <p class="name">
-          Surya Sonar
-        </p>
+      <div class="namediv">
+        <a href="#frontpage">
+          <p class="name">
+            Surya Sonar
+          </p>
+        </a>
       </div>
 
       <div class="about-project-contact">
@@ -16,7 +18,7 @@
         </a>
         <a href="#contactsection">
           <p class="contacts">
-            Contacts
+            Contact
           </p>
         </a>
       </div>
@@ -43,7 +45,7 @@
         </a>
         <a href="#contactsection">
           <p @click="menu = !menu">
-            Contacts
+            Contact
           </p>
         </a>
       </div>
@@ -98,16 +100,20 @@ export default {
 }
 
 #navbar p {
+  cursor: pointer;
   font-size: 1.5rem;
   color: #ffffff;
-  cursor: default;
 }
 
 #navbar .name {
   font-family: "Amarante", cursive;
   font-size: 2.5rem;
   color: #ffffff;
-  cursor: default;
+}
+
+.namediv a{
+  text-decoration: none;
+  
 }
 
 /* <-----------menu button and overlay--------------> */
@@ -116,8 +122,14 @@ export default {
 }
 #menuclosebutton,
 #menuopenbutton {
+  cursor: pointer;
   font-size: 2.5rem;
   color: #ffffff;
+}
+
+#menuclosebutton:hover,
+#menuopenbutton:hover {
+  color: cyan;
 }
 
 .menuoverlay {
@@ -144,7 +156,13 @@ export default {
   color: white;
 }
 
+.menucontents a:hover,
+.menusocialicons a:hover {
+  color: cyan;
+}
+
 .menucontents p {
+  cursor: pointer;
   margin: 1rem auto;
   text-align: center;
 }
@@ -159,7 +177,11 @@ export default {
   color: white;
 }
 .menusocialicons i {
+  cursor: pointer;
   margin: 1rem 1rem;
+}
+.menusocialicons i:hover {
+  color: cyan;
 }
 /* <----------------------------------------------------> */
 

@@ -1,10 +1,10 @@
 <template>
   <NavBar> </NavBar>
   <div @click="menu = false">
-  <div class="firstpage">
+  <div id="frontpage" class="firstpage">
     <div class="bg-text">
       <h1>Hi! I'm <span class="name">Surya Sonar</span></h1>
-      <h2>And I'm a <span class="cs">Computer Science student</span></h2>
+      <h2>And I'm a <span class="cs">Computer Science student.</span></h2>
       <div>
         <button class="button" v-on:click="downloadresume()">
           Resume
@@ -71,13 +71,13 @@
   <div class="forth">
     <div id="contactsection" class="contactcontainer">
       <div class="contact-icons">
-        <a :href="linkedin">
+        <a class="iconcontact" :href="linkedin">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a :href="instagram">
+        <a class="iconcontact" :href="instagram">
           <i class="fab fa-instagram"></i>
         </a>
-        <a :href="github">
+        <a class="iconcontact" :href="github">
           <i class="fab fa-github"></i>
         </a>
       </div>
@@ -131,7 +131,7 @@ export default {
           ],
           id: "linkshare",
           image: linkshareimg,
-          source_code: "https://github.com/iamsuryasonar/linkshare",
+          source_code: "https://github.com/iamsuryasonar/linkshare.git",
           build_info:
             "Built using NodeJs, Firebase Database, Vuetify, VueJs, Vue Router and Vuex.",
           title: "LinkShare",
@@ -149,7 +149,7 @@ export default {
             },
           ],
           image: cryptorankimg,
-          source_code: "https://www.instagram.com/CryptoRank",
+          source_code: "https://www.instagram.com/CryptoRank.git",
           build_info: "Built using Java, XML, Volley library and Coincap Api.",
           title: "CryptoRank",
           description:
@@ -166,7 +166,7 @@ export default {
             },
           ],
           image: notebookimg,
-          source_code: "https://www.github.com/NoteBook",
+          source_code: "https://www.github.com/NoteBook.git",
           build_info: "Built using Java, XML and Firebase Database.",
           title: "NoteBook",
           description:
@@ -189,7 +189,7 @@ export default {
           ],
           id: "portfolio",
           image: portfolioimg,
-          source_code: "https://github.com/iamsuryasonar/portfolio",
+          source_code: "https://github.com/iamsuryasonar/personalportfolio.git",
           build_info:
             "Built using NodeJs, CSS, VueJs.",
           title: "Portfolio",
@@ -208,7 +208,9 @@ export default {
       window.open(source_code);
     },
 
-
+    downloadresume(){
+      console.log("resume in making")
+    }
   },
 };
 </script>
@@ -429,6 +431,10 @@ blockquote {
   margin: 0 1rem;
   color: white;
   cursor: pointer;
+}
+
+.contact-icons i:hover {
+  color: cyan;
 }
 
 .contactme {
