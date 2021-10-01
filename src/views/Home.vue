@@ -429,11 +429,6 @@ blockquote {
   background-color: #a93800;
   color: white;
   outline-color: white;
-  -webkit-transform: scale(0.1);
-  -moz-transform: scale(0.1);
-  -ms-transform: scale(0.1);
-  -o-transform: scale(0.1);
-  transform: scale(0.1);
 }
 /* <--------contact section--------> */
 .forth {
