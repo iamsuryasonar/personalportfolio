@@ -3,7 +3,7 @@
     <div class="nav-wrapper">
       <div class="namediv">
         <a href="#frontpage">
-          <p @click="menu = !menu" class="name">
+          <p @click="menu = false" class="name">
             Surya Sonar
           </p>
         </a>
@@ -90,7 +90,7 @@ export default {
   z-index: 222;
 }
 #navbar .nav-wrapper {
-  height: 40px;
+  height: 20px;
   width: auto;
   display: flex;
   flex-direction: row;
@@ -101,22 +101,25 @@ export default {
 
 #navbar p {
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #ffffff;
 }
 
 #navbar .name {
   font-family: "Amarante", cursive;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #ffffff;
 }
 
-.namediv a{
+.namediv a {
   text-decoration: none;
-  
 }
 
 /* <-----------menu button and overlay--------------> */
+
+#navbar .name:hover {
+  color: #abf0ef;
+}
 .menuiconwrapper {
   display: none;
 }
@@ -129,7 +132,7 @@ export default {
 
 #menuclosebutton:hover,
 #menuopenbutton:hover {
-  color: cyan;
+  color: #5bbdbc;
 }
 
 .menuoverlay {
@@ -158,7 +161,7 @@ export default {
 
 .menucontents a:hover,
 .menusocialicons a:hover {
-  color: cyan;
+  color: #5bbdbc;
 }
 
 .menucontents p {
@@ -168,7 +171,7 @@ export default {
 }
 
 .menucontents p:hover {
-  border-bottom: 1px solid yellow;
+  border-bottom: 2px solid #e4e403;
 }
 
 .menucontents,
@@ -181,7 +184,7 @@ export default {
   margin: 1rem 1rem;
 }
 .menusocialicons i:hover {
-  color: cyan;
+  color: #5bbdbc;
 }
 /* <----------------------------------------------------> */
 
@@ -196,7 +199,7 @@ export default {
   text-decoration: none;
 }
 .about-project-contact p:hover {
-  border-bottom: 1px solid yellow;
+  border-bottom: 2px solid #e4e403;
 }
 /* 700px and above */
 @media screen and (min-width: 700px) {
@@ -216,7 +219,11 @@ export default {
     display: block;
   }
   #navbar .name {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+  #menuopenbutton,
+  #menuclosebutton {
+    font-size: 1.5rem;
   }
   .about-project-contact {
     display: none;

@@ -1,107 +1,108 @@
 <template>
   <NavBar> </NavBar>
-  <div @click="menu = false">
-    <div id="frontpage" class="firstpage">
-      <div class="bg-text">
-        <h1>Hi! I'm <span class="name">Surya Sonar</span></h1>
-        <h2>And I'm a <span class="cs">Computer Science student.</span></h2>
-        <div>
-          <button class="button" v-on:click="downloadresume()">
-            Resume
-          </button>
-        </div>
-      </div>
-    </div>
 
-    <div class="aboutme">
-      <div class="aboutmecontainer">
-        <div class="profilepicture">
-          <img src="../assets/dp.jpg" alt="picture of me" />
-        </div>
-        <div id="aboutsection" class="aboutmewrapper">
-          <p class="aboutmetitle">About Me</p>
-          <p>
-            &emsp; Since my childhood, I used to dream of using a computer. That
-            dream kept me around computer science and technology.
-          </p>
-          <p>
-            &emsp; Once I passed out of high school I got admitted for
-            bachelor's. It opened me to an endless resources and like-minded
-            peoples. Out of curiosity I learned a lot about WHY and HOW of
-            computer science.
-          </p>
-          <blockquote>
-            Curiocity keeps me running.
-          </blockquote>
-          <p>
-            &emsp; Currently pursuing Master of Computer Application at Cotton
-            University and improving data structure as well as problem solving
-            skills on competitive platforms and implementing those knowledge on
-            developing real life applications.
-          </p>
-        </div>
+  <div id="frontpage" class="firstpage">
+    <div class="bg-text">
+      <p>
+        Hi! I'm <br />
+        <span class="name"> Surya Sonar </span>
+      </p>
+      <p>And <br />I'm a <span class="cs">Computer Science student.</span></p>
+      <div>
+        <button class="button" v-on:click="downloadresume()">
+          Resume
+        </button>
       </div>
     </div>
-    <div class="third">
-      <div id="projectsection" class="projectcontainer">
-        <header><p>My Projects</p></header>
-        <div class="projectwrapper" v-for="(project, id) in projects" :key="id">
-          <img class="projectimages" v-bind:src="project.image" alt="" />
-          <div class="icon-title-button-wrapper">
-            <div class="projecticons">
-              <div v-for="(i, id) in project.icons" :key="id">
-                <i :class="i.icon"></i>
-              </div>
+  </div>
+
+  <div class="aboutme">
+    <div class="aboutmecontainer">
+      <div class="profilepicture">
+        <img src="../assets/dp.jpg" alt="picture of me" />
+      </div>
+      <div id="aboutsection" class="aboutmewrapper">
+        <p class="aboutmetitle">About Me</p>
+        <p>
+          &emsp; Since my childhood, I used to dream of using a computer. That
+          dream kept me around computer science and technology.
+        </p>
+        <p>
+          &emsp; Once I passed out of high school I got admitted for bachelor's.
+          It opened me to an endless resources and like-minded peoples. Out of
+          curiosity I learned a lot about WHY and HOW of computer science.
+        </p>
+        <blockquote>
+          Curiocity keeps me running.
+        </blockquote>
+        <p>
+          &emsp; Currently pursuing Master of Computer Application at Cotton
+          University and improving data structure as well as problem solving
+          skills on competitive platforms and implementing those knowledge on
+          developing real life applications.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="third">
+    <div id="projectsection" class="projectcontainer">
+      <header><p>My Projects</p></header>
+      <div class="projectwrapper" v-for="(project, id) in projects" :key="id">
+        <img class="projectimages" v-bind:src="project.image" alt="" />
+        <div class="icon-title-button-wrapper">
+          <div class="projecticons">
+            <div v-for="(i, id) in project.icons" :key="id">
+              <i :class="i.icon"></i>
             </div>
-            <p class="projecttitle">{{ project.title }}</p>
-            <article>
-              <p class="build-with">
-                {{ project.build_info }}
-              </p>
-              <p>{{ project.description }}</p>
-            </article>
-            <div>
-              <button
-                class="button"
-                v-on:click="source_code(project.source_code)"
-              >
-                View Source Code
-              </button>
-            </div>
+          </div>
+          <p class="projecttitle">{{ project.title }}</p>
+          <article>
+            <p class="build-with">
+              {{ project.build_info }}
+            </p>
+            <p class="description">{{ project.description }}</p>
+          </article>
+          <div>
+            <button
+              class="button"
+              v-on:click="source_code(project.source_code)"
+            >
+              View Source Code
+            </button>
           </div>
         </div>
       </div>
     </div>
-    <div class="forth">
-      <div id="contactsection" class="contactcontainer">
-        <div class="contact-icons">
-          <a class="iconcontact" :href="linkedin">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a class="iconcontact" :href="instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a class="iconcontact" :href="github">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-        <div class="contactme">
-          <p class="contactp">Contact me?</p>
-          <p class="emailp">
-            Email me at:
-            <a
-              class="mail_to"
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=iamsuryasonar@gmail.com"
-            >
-              iamsuryasonar@gmail.com </a
-            >.
-          </p>
-        </div>
+  </div>
+  <div class="forth">
+    <div id="contactsection" class="contactcontainer">
+      <div class="contact-icons">
+        <a class="iconcontact" :href="linkedin">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="iconcontact" :href="instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a class="iconcontact" :href="github">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="contactme">
+        <p class="contactp">Contact me?</p>
+        <p class="emailp">
+          Email me at:
+          <a
+            class="mail_to"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=iamsuryasonar@gmail.com"
+          >
+            iamsuryasonar@gmail.com </a
+          >.
+        </p>
       </div>
     </div>
-    <div class="footer">
-      <p>Made with <span class="heart"> &hearts;</span> by Surya Sonar</p>
-    </div>
+  </div>
+  <div class="footer">
+    <p>Made with <span class="heart"> &hearts;</span> by Surya Sonar</p>
   </div>
 </template>
 
@@ -225,9 +226,9 @@ export default {
   box-sizing: border-box;
 }
 body {
-  background-color: aquamarine;
   overflow-x: hidden;
 }
+
 .aboutme,
 .firstpage,
 .third,
@@ -237,21 +238,20 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 120vh;
 }
 
 /* <--------first page--------> */
 
 .firstpage {
-  z-index: 0;
-  position: relative;
+  min-height: calc(100vh + 5vw);
   background-image: url("../assets/firstpagebackground.jpg");
-  background-position: center;
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: cover;
+  background-attachment: scroll;
+  position: relative;
+  z-index: 3;
   transform: scale(1.1);
-  min-height: 100vh;
+  clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 5vw), 0 100%);
+  margin-bottom: -5vw;
 }
 .bg-text {
   position: absolute;
@@ -264,25 +264,49 @@ body {
   padding: 1rem 0;
   text-align: center;
 }
+.bg-text p {
+  font-size: 1.5rem;
+}
 
 .bg-text .name {
-  font-family: "Architects Daughter", cursive;
-  color: yellow;
   font-size: 2.8rem;
-}
-.bg-text .cs {
-  border-bottom: 2px solid yellow;
+  font-family: "Amarante", cursive;
+  font-weight: 100;
+  color: #e4e403;
 }
 
+.bg-text .cs {
+  font-size: 2rem;
+  border-bottom: 2px solid #e4e403;
+}
+
+.bg-text button {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #252934;
+  background-color: #e4e403;
+  padding: 8px 12px;
+  margin: auto;
+  margin-top: 1rem;
+  border: none;
+  outline: 2px solid rgb(0, 31, 31);
+  outline-offset: -0.2em;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.bg-text button:hover {
+  background-color: #a93800;
+  color: white;
+  outline-color: white;
+}
 /* <--------about me section--------> */
 
 .aboutme {
   height: auto;
   position: relative;
-  z-index: 1;
-  background-color: hsl(355, 73%, 48%);
-  clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0% 100%);
-  margin-top: -5vw;
+  z-index: 2;
+  background-color: #a93800;
+  clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 5vw), 0 100%);
   margin-bottom: -5vw;
 }
 .aboutmecontainer {
@@ -293,29 +317,6 @@ body {
   justify-content: center;
   color: #f1f1f1;
 }
-.aboutmetitle {
-  margin-top: 4rem;
-}
-.aboutmewrapper {
-  margin-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-p {
-  font-size: 1.5rem;
-  margin: 2rem auto;
-  text-align: justify;
-}
-blockquote {
-  font-size: 1.2rem;
-}
-.aboutmetitle {
-  font-family: "Short Stack", cursive;
-  font-size: 3rem;
-  border-bottom: 2px solid yellow;
-}
 .profilepicture img {
   margin-top: 8rem;
   padding: 1rem;
@@ -325,14 +326,37 @@ blockquote {
   box-shadow: 5px 15px 30px -20px rgb(3, 1, 0);
 }
 
+.aboutmewrapper {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutmewrapper p {
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  text-align: justify;
+}
+.aboutmewrapper .aboutmetitle {
+  font-size: 2.5rem;
+  font-family: "Short Stack", cursive;
+  margin-top: 4rem;
+  border-bottom: 2px solid #e4e403;
+}
+blockquote {
+  font-size: 1.2rem;
+}
+
 /* <--------project section--------> */
 .third {
   height: auto;
   position: relative;
   z-index: 1;
-  clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0% 100%);
-  margin-top: -5vw;
-  background-color: #1bf5f0;
+  margin-bottom: -5vw;
+  background-color: #5bbdbc;
+  /* #1bf5f0; */
+  clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 5vw), 0 100%);
 }
 .projectcontainer {
   width: 90%;
@@ -342,10 +366,10 @@ blockquote {
   align-items: center;
 }
 .projectcontainer header p {
-  margin-top: 4rem;
+  font-size: 2.5rem;
   font-family: "Short Stack", cursive;
-  font-size: 3rem;
-  border-bottom: 2px solid yellow;
+  margin-top: 4rem;
+  border-bottom: 2px solid #e4e403;
 }
 
 .projectwrapper {
@@ -369,25 +393,8 @@ blockquote {
 .icon-title-button-wrapper p {
   text-align: justify;
 }
-.button {
-  font-size: 20px;
-  color: aliceblue;
-  text-decoration: none;
-  padding: 8px 12px;
-  color: #252934;
-  margin: auto;
-  margin-top: 1rem;
-  background-color: yellow;
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  border: none;
-
-  outline: 2px solid rgb(0, 31, 31);
-  outline-offset: -0.15em;
-}
-
 .projecticons {
-  font-size: 30px;
+  font-size: 2rem;
   margin-top: 2rem;
   /* flex is not working */
   display: flex;
@@ -403,34 +410,54 @@ blockquote {
 }
 
 .build-with {
-  font-size: 20px;
+  font-size: 1.5rem;
 }
-
+.icon-title-button-wrapper button {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #252934;
+  background-color: #e4e403;
+  padding: 8px 12px;
+  margin: auto;
+  margin-top: 1rem;
+  border: none;
+  outline: 2px solid rgb(0, 31, 31);
+  outline-offset: -0.15em;
+  cursor: pointer;
+}
+.icon-title-button-wrapper button:hover {
+  background-color: #a93800;
+  color: white;
+  outline-color: white;
+  -webkit-transform: scale(0.1);
+  -moz-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  -o-transform: scale(0.1);
+  transform: scale(0.1);
+}
 /* <--------contact section--------> */
 .forth {
   width: auto;
-  min-height: 115vh;
+  min-height: 105vh;
   position: relative;
-  z-index: 2;
-  clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0% 100%);
-  margin-top: -5vw;
   background-color: #252934;
+  z-index: 0;
 }
 
 .contactcontainer {
-  margin: 8rem auto;
   width: 90%;
   height: 100%;
+  margin: 8rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .contact-icons {
+  font-size: 2rem;
   margin-top: 15%;
+  margin-left: auto;
   display: flex;
   flex-direction: row;
-  font-size: 30px;
-  margin-left: auto;
 }
 
 .contact-icons i {
@@ -440,30 +467,30 @@ blockquote {
 }
 
 .contact-icons i:hover {
-  color: cyan;
+  color: #5bbdbc;
 }
 
 .contactme {
-  color: aliceblue;
+  color: white;
 }
 .contactp {
-  font-size: 3rem;
-  border-bottom: 1px solid yellow;
+  font-size: 2.5rem;
+  border-bottom: 1px solid #e4e403;
 }
 .emailp {
+  font-size: 1.5rem;
   word-wrap: break-word;
   margin-top: 7rem;
   text-align: left;
-  font-size: 1.5rem;
 }
 .mail_to {
   font-size: 2rem;
   text-decoration: none;
-  color: yellow;
+  color: #e4e403;
 }
 
 .mail_to:hover {
-  border-bottom: 1px solid yellow;
+  border-bottom: 1px solid #e4e403;
 }
 
 /* <--------footer--------> */
@@ -473,13 +500,13 @@ blockquote {
   height: auto;
   background-color: #252934;
   outline: none;
-  margin-top: -2px;
+  padding: 10px 10px;
 }
 .footer p {
+  font-size: 1.5rem;
   text-align: center;
   margin: 0px;
-  font-size: 1.5rem;
-  color: aliceblue;
+  color: white;
 }
 .footer .heart {
   color: red;
@@ -488,11 +515,25 @@ blockquote {
 /* 1020px and below */
 @media screen and (max-width: 1020px) {
   /* <------firstpage------> */
+  .firstpage {
+    height: 100vh;
+  }
+
   .bg-text {
     width: 70%;
   }
-  .firstpage {
-    height: 100vh;
+  .bg-text p {
+    font-size: 1.2rem;
+  }
+  .bg-text .name {
+    font-size: 2.4rem;
+  }
+  .bg-text .cs {
+    font-size: 1.4rem;
+  }
+
+  .bg-text button {
+    font-size: 1rem;
   }
 
   /* <------aboutmepage------> */
@@ -505,8 +546,14 @@ blockquote {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .aboutmewrapper .aboutmetitle {
+    font-size: 2.3rem;
+  }
   .aboutmewrapper p {
-    font-size: 12px;
+    font-size: 1.2rem;
+  }
+  .aboutmewrapper blockquote {
+    font-size: 1.1rem;
   }
 
   /* <------projectpage------> */
@@ -518,14 +565,49 @@ blockquote {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .projectwrapper p {
-    font-size: 12px;
-  }
+
   .profilepicture img {
     margin-top: 2rem;
   }
+  .projectcontainer p {
+    font-size: 2.3rem;
+  }
   .icon-title-button-wrapper {
     margin-left: 0;
+  }
+  .icon-title-button-wrapper .projecticons,
+  .icon-title-button-wrapper .projecttitle {
+    font-size: 1.8rem;
+  }
+  .icon-title-button-wrapper .build-with {
+    font-size: 1.3rem;
+  }
+  .icon-title-button-wrapper .description {
+    font-size: 1rem;
+  }
+  .icon-title-button-wrapper button {
+    font-size: 1.2rem;
+  }
+
+  /* <------contactpage------> */
+
+  .contact-icons {
+    font-size: 1.8rem;
+  }
+  .contactp {
+    font-size: 2.3rem;
+  }
+  .emailp {
+    font-size: 1.5rem;
+  }
+  .mail_to {
+    font-size: 2rem;
+  }
+
+  /* <------footersection------> */
+
+  .footer p {
+    font-size: 1.2rem;
   }
 }
 
@@ -534,6 +616,19 @@ blockquote {
   /* <------firstpage------> */
   .bg-text {
     width: 80%;
+  }
+  .bg-text p {
+    font-size: 1.2rem;
+  }
+
+  .bg-text .name {
+    font-size: 2rem;
+  }
+  .bg-text .cs {
+    font-size: 1.2rem;
+  }
+  .bg-text button {
+    font-size: 1rem;
   }
 
   /* <------aboutmepage------> */
@@ -544,6 +639,15 @@ blockquote {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .aboutmewrapper .aboutmetitle {
+    font-size: 2rem;
+  }
+  .aboutmewrapper p {
+    font-size: 1.2rem;
+  }
+  .aboutmewrapper blockquote {
+    font-size: 1rem;
+  }
 
   /* <------projectpage------> */
   .projectcontainer {
@@ -553,18 +657,43 @@ blockquote {
   .icon-title-button-wrapper {
     margin-left: 0;
   }
+  .projectcontainer p {
+    font-size: 2rem;
+  }
+  .icon-title-button-wrapper .projecticons,
+  .icon-title-button-wrapper .projecttitle {
+    font-size: 1.5rem;
+  }
+  .icon-title-button-wrapper .build-with {
+    font-size: 1.2rem;
+  }
+  .icon-title-button-wrapper .description {
+    font-size: 1rem;
+  }
+  .icon-title-button-wrapper button {
+    font-size: 1rem;
+  }
+
+  /* <------contactpage------> */
+
+  .contact-icons {
+    font-size: 1.5rem;
+  }
+  .contactp {
+    font-size: 1.8rem;
+  }
+  .emailp {
+    font-size: 1.4rem;
+  }
+  .mail_to {
+    font-size: 1.8rem;
+  }
+
+  /* <------footersection------> */
+
+  .footer p {
+    font-size: 1rem;
+  }
 }
 
-@media only screen and (orientation: landscape) {
-  .aboutme {
-    margin-top: -15vh;
-    margin-bottom: -15vh;
-  }
-  .third {
-    margin-top: -15vh;
-  }
-  .forth {
-    margin-top: -15vh;
-  }
-}
 </style>
