@@ -11,6 +11,7 @@
   border: 0;
 }
 html,body{
+   scroll-behavior: smooth;
     overflow-x: hidden;
 }
 </style>

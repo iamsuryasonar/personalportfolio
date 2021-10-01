@@ -1,101 +1,107 @@
 <template>
   <NavBar> </NavBar>
   <div @click="menu = false">
-  <div id="frontpage" class="firstpage">
-    <div class="bg-text">
-      <h1>Hi! I'm <span class="name">Surya Sonar</span></h1>
-      <h2>And I'm a <span class="cs">Computer Science student.</span></h2>
-      <div>
-        <button class="button" v-on:click="downloadresume()">
-          Resume
-        </button>
+    <div id="frontpage" class="firstpage">
+      <div class="bg-text">
+        <h1>Hi! I'm <span class="name">Surya Sonar</span></h1>
+        <h2>And I'm a <span class="cs">Computer Science student.</span></h2>
+        <div>
+          <button class="button" v-on:click="downloadresume()">
+            Resume
+          </button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="aboutme">
-    <div class="aboutmecontainer">
-      <div class="profilepicture">
-        <img src="../assets/dp.jpg" alt="picture of me" />
-      </div>
-      <div  id="aboutsection" class="aboutmewrapper">
-        <p class="aboutmetitle">About Me</p>
-        <p>
-          &emsp; Since my childhood, I used to dream of using a computer. That
-          dream kept me around computer science and technology.
-        </p>
-        <p>
-          &emsp; Once I passed out of high school I got admitted for bachelor's.
-          It opened me to an endless resources and like-minded peoples. Out of
-          curiosity I learned a lot about WHY and HOW of computer science.
-        </p>
-        <blockquote>
-          Curiocity keeps me running.
-        </blockquote>
-        <p>
-          &emsp; Currently pursuing Master of Computer Application at Cotton
-          University and improving data structure as well as problem solving
-          skills on competitive platforms and implementing those knowledge on
-          developing real life applications.
-        </p>
+    <div class="aboutme">
+      <div class="aboutmecontainer">
+        <div class="profilepicture">
+          <img src="../assets/dp.jpg" alt="picture of me" />
+        </div>
+        <div id="aboutsection" class="aboutmewrapper">
+          <p class="aboutmetitle">About Me</p>
+          <p>
+            &emsp; Since my childhood, I used to dream of using a computer. That
+            dream kept me around computer science and technology.
+          </p>
+          <p>
+            &emsp; Once I passed out of high school I got admitted for
+            bachelor's. It opened me to an endless resources and like-minded
+            peoples. Out of curiosity I learned a lot about WHY and HOW of
+            computer science.
+          </p>
+          <blockquote>
+            Curiocity keeps me running.
+          </blockquote>
+          <p>
+            &emsp; Currently pursuing Master of Computer Application at Cotton
+            University and improving data structure as well as problem solving
+            skills on competitive platforms and implementing those knowledge on
+            developing real life applications.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="third">
-    <div id="projectsection" class="projectcontainer">
-      <header><p>My Projects</p></header>
-      <div class="projectwrapper" v-for="(project, id) in projects" :key="id">
-        <img class="projectimages" v-bind:src="project.image" alt="" />
-        <div class="icon-title-button-wrapper">
-          <div class="projecticons">
-            <div v-for="(i, id) in project.icons" :key="id">
-              <i :class="i.icon"></i>
+    <div class="third">
+      <div id="projectsection" class="projectcontainer">
+        <header><p>My Projects</p></header>
+        <div class="projectwrapper" v-for="(project, id) in projects" :key="id">
+          <img class="projectimages" v-bind:src="project.image" alt="" />
+          <div class="icon-title-button-wrapper">
+            <div class="projecticons">
+              <div v-for="(i, id) in project.icons" :key="id">
+                <i :class="i.icon"></i>
+              </div>
             </div>
-          </div>
-          <p class="projecttitle">{{ project.title }}</p>
-          <article>
-            <p class="build-with">
-              {{ project.build_info }}
-            </p>
-            <p>{{ project.description }}</p>
-          </article>
-          <div>
-            <button class="button" v-on:click="source_code(project.source_code)">
-              View Source Code
-            </button>
+            <p class="projecttitle">{{ project.title }}</p>
+            <article>
+              <p class="build-with">
+                {{ project.build_info }}
+              </p>
+              <p>{{ project.description }}</p>
+            </article>
+            <div>
+              <button
+                class="button"
+                v-on:click="source_code(project.source_code)"
+              >
+                View Source Code
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="forth">
-    <div id="contactsection" class="contactcontainer">
-      <div class="contact-icons">
-        <a class="iconcontact" :href="linkedin">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a class="iconcontact" :href="instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a class="iconcontact" :href="github">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <div class="contactme">
-        <p class="contactp">Contact me?</p>
-        <p class="emailp">
-          Please, use the form below or <br />
-          send an email to 
-          <a class="mail_to" href="https://mail.google.com/mail/?view=cm&fs=1&to=iamsuryasonar@gmail.com">
-          iamsuryasonar@gmail.com
-          </a>.
-        </p>
+    <div class="forth">
+      <div id="contactsection" class="contactcontainer">
+        <div class="contact-icons">
+          <a class="iconcontact" :href="linkedin">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a class="iconcontact" :href="instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a class="iconcontact" :href="github">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <div class="contactme">
+          <p class="contactp">Contact me?</p>
+          <p class="emailp">
+            Email me at:
+            <a
+              class="mail_to"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=iamsuryasonar@gmail.com"
+            >
+              iamsuryasonar@gmail.com </a
+            >.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="footer">
-    <p>Made with <span class="heart"> &hearts;</span> by Surya Sonar</p>
-  </div>
+    <div class="footer">
+      <p>Made with <span class="heart"> &hearts;</span> by Surya Sonar</p>
+    </div>
   </div>
 </template>
 
@@ -106,7 +112,6 @@ import cryptorankimg from "@/assets/project2.jpg";
 import notebookimg from "@/assets/project3.jpg";
 import portfolioimg from "@/assets/project4.jpg";
 
-
 export default {
   name: "Home",
   components: {
@@ -115,7 +120,6 @@ export default {
 
   data() {
     return {
-      
       projects: [
         {
           icons: [
@@ -190,8 +194,7 @@ export default {
           id: "portfolio",
           image: portfolioimg,
           source_code: "https://github.com/iamsuryasonar/personalportfolio.git",
-          build_info:
-            "Built using NodeJs, CSS, VueJs.",
+          build_info: "Built using NodeJs, CSS, VueJs.",
           title: "Portfolio",
           description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A,obcaecati provident perferendis repellat natus quibusdam incidunt expedita quisquam dolore necessitatibus corporis iure distinctio nihil vel quidem deserunt est id quaerat.",
@@ -208,9 +211,9 @@ export default {
       window.open(source_code);
     },
 
-    downloadresume(){
-      console.log("resume in making")
-    }
+    downloadresume() {
+      console.log("resume in making");
+    },
   },
 };
 </script>
@@ -234,7 +237,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
 }
 
 /* <--------first page--------> */
@@ -242,10 +245,13 @@ body {
 .firstpage {
   z-index: 0;
   position: relative;
-  height: 115vh;
   background-image: url("../assets/firstpagebackground.jpg");
-  background-size: cover;
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
+  transform: scale(1.1);
+  min-height: 100vh;
 }
 .bg-text {
   position: absolute;
@@ -287,7 +293,7 @@ body {
   justify-content: center;
   color: #f1f1f1;
 }
-.aboutmetitle{
+.aboutmetitle {
   margin-top: 4rem;
 }
 .aboutmewrapper {
@@ -377,7 +383,7 @@ blockquote {
   border: none;
 
   outline: 2px solid rgb(0, 31, 31);
-  outline-offset: -.15em;
+  outline-offset: -0.15em;
 }
 
 .projecticons {
@@ -450,7 +456,7 @@ blockquote {
   text-align: left;
   font-size: 1.5rem;
 }
-.mail_to{
+.mail_to {
   font-size: 2rem;
   text-decoration: none;
   color: yellow;
@@ -483,7 +489,10 @@ blockquote {
 @media screen and (max-width: 1020px) {
   /* <------firstpage------> */
   .bg-text {
-    width: 80%;
+    width: 70%;
+  }
+  .firstpage {
+    height: 100vh;
   }
 
   /* <------aboutmepage------> */
@@ -496,6 +505,9 @@ blockquote {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .aboutmewrapper p {
+    font-size: 12px;
+  }
 
   /* <------projectpage------> */
   .projectcontainer {
@@ -505,6 +517,9 @@ blockquote {
   .projectwrapper {
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .projectwrapper p {
+    font-size: 12px;
   }
   .profilepicture img {
     margin-top: 2rem;
@@ -518,7 +533,7 @@ blockquote {
 @media screen and (max-width: 700px) {
   /* <------firstpage------> */
   .bg-text {
-    width: 95%;
+    width: 80%;
   }
 
   /* <------aboutmepage------> */
@@ -537,6 +552,19 @@ blockquote {
   }
   .icon-title-button-wrapper {
     margin-left: 0;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .aboutme {
+    margin-top: -15vh;
+    margin-bottom: -15vh;
+  }
+  .third {
+    margin-top: -15vh;
+  }
+  .forth {
+    margin-top: -15vh;
   }
 }
 </style>
