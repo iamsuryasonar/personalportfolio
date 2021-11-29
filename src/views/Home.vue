@@ -7,7 +7,7 @@
         Hi! I'm <br />
         <span class="name"> Surya Sonar </span>
       </p>
-      <p>And <br />I'm a <span class="cs">Computer Science student.</span></p>
+      <p>I'm a <span class="cs">Computer Science student.</span></p>
       <div>
         <button class="button" v-on:click="downloadresume()">
           Resume
@@ -24,16 +24,16 @@
       <div id="aboutsection" class="aboutmewrapper">
         <p class="aboutmetitle">About Me</p>
         <p>
-          &emsp; Since my childhood, I used to dream of using a computer. That
+          &emsp; Since my childhood, I dreamt of using a computer. That
           dream kept me around computer science and technology.
         </p>
         <p>
-          &emsp; Once I passed out of high school I got admitted for bachelor's.
-          It opened me to an endless resources and like-minded peoples. Out of
-          curiosity I learned a lot about WHY and HOW of computer science.
+          &emsp; Once I passed out of high school I got admitted for bachelor's degree in computer application.
+          It opened me to an endless world of possibilities where I encountered many like-minded peoples with similar dreams. Out of
+          curiosity I learned a lot about WHY's and HOW's of computer science.
         </p>
         <blockquote>
-          Curiocity keeps me running.
+          Curiocity kept me running.
         </blockquote>
         <p>
           &emsp; Currently pursuing Master of Computer Application at Cotton
@@ -134,14 +134,14 @@ export default {
               icon: "fab fa-node-js",
             },
           ],
-          id: "linkshare",
+          id: "URLshare",
           image: linkshareimg,
           source_code: "https://github.com/iamsuryasonar/linkshare.git",
           build_info:
             "Built using NodeJs, Firebase Database, Vuetify, VueJs, Vue Router and Vuex.",
-          title: "LinkShare",
+          title: "URLshare",
           description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A,obcaecati provident perferendis repellat natus quibusdam incidunt expedita quisquam dolore necessitatibus corporis iure distinctio nihil vel quidem deserunt est id quaerat.",
+            "URLshare is a URL sharing platform, which enables users to share all of their URL's with a single URL. For example 'www.urlshare.com/username'.",
         },
         {
           id: "cryptorank",
@@ -158,7 +158,7 @@ export default {
           build_info: "Built using Java, XML, Volley library and Coincap Api.",
           title: "CryptoRank",
           description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A,obcaecati provident perferendis repellat natus quibusdam incidunt expedita quisquam dolore necessitatibus corporis iure distinctio nihil vel quidem deserunt est id quaerat.",
+            "CryptoRank is a cryptocurrency ranking app, using the CoinCap REST API, I enabled all cryptocurrencies to be displayed rankwise with its current value in US dolars and change percentage of  it in 24 hours. I used the VOLLEY library to fetch data from CoinCap API.",
         },
         {
           id: "notebook",
@@ -175,7 +175,7 @@ export default {
           build_info: "Built using Java, XML and Firebase Database.",
           title: "NoteBook",
           description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A,obcaecati provident perferendis repellat natus quibusdam incidunt expedita quisquam dolore necessitatibus corporis iure distinctio nihil vel quidem deserunt est id quaerat.",
+            "An android app to take important notes, I used firebase database for authentication, authorisation and storage of user data.",
         },
         {
           icons: [
@@ -198,7 +198,7 @@ export default {
           build_info: "Built using NodeJs, CSS, VueJs.",
           title: "Portfolio",
           description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A,obcaecati provident perferendis repellat natus quibusdam incidunt expedita quisquam dolore necessitatibus corporis iure distinctio nihil vel quidem deserunt est id quaerat.",
+            "It is a responsive portfolio website to showcase my beliefs, skills, qualifications and experiences.",
         },
       ],
 
@@ -270,7 +270,7 @@ body {
 
 .bg-text .name {
   font-size: 2.8rem;
-  font-family: "Amarante", cursive;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   color: #e4e403;
 }
@@ -340,7 +340,7 @@ body {
 }
 .aboutmewrapper .aboutmetitle {
   font-size: 2.5rem;
-  font-family: "Short Stack", cursive;
+  font-family: 'Montserrat', sans-serif;
   margin-top: 4rem;
   border-bottom: 2px solid #e4e403;
 }
@@ -367,7 +367,7 @@ blockquote {
 }
 .projectcontainer header p {
   font-size: 2.5rem;
-  font-family: "Short Stack", cursive;
+  font-family: 'Montserrat', sans-serif;
   margin-top: 4rem;
   border-bottom: 2px solid #e4e403;
 }

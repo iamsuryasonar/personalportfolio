@@ -81,7 +81,7 @@ export default {
 </script>
 <style scoped>
 /* <----title (name) font don't delete-----> */
-@import url("https://fonts.googleapis.com/css2?family=Amarante&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Amarante&display=swap"); */
 
 #navbar {
   background-color: #0000001f;
@@ -106,7 +106,7 @@ export default {
 }
 
 #navbar .name {
-  font-family: "Amarante", cursive;
+  font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   color: #ffffff;
 }

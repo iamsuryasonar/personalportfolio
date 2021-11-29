@@ -5,7 +5,7 @@
 <style>
 
 *{
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   border: 0;
