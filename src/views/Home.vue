@@ -9,9 +9,11 @@
       </p>
       <p>I'm a <span class="cs">Computer Science student.</span></p>
       <div>
-        <button class="button" v-on:click="downloadresume()">
-          Resume
-        </button>
+        <a href="https://drive.google.com/file/d/1gxK7V-ZJGTqqkMiUic3nxMe4_cfjbkAe/view?usp=sharing">
+          <button class="button">
+            Resume
+          </button>
+        </a>
       </div>
     </div>
   </div>
@@ -24,13 +26,15 @@
       <div id="aboutsection" class="aboutmewrapper">
         <p class="aboutmetitle">About Me</p>
         <p>
-          &emsp; Since my childhood, I dreamt of using a computer. That
-          dream kept me around computer science and technology.
+          &emsp; Since my childhood, I dreamt of using a computer. That dream
+          kept me around computer science and technology.
         </p>
         <p>
-          &emsp; Once I passed out of high school I got admitted for bachelor's degree in computer application.
-          It opened me to an endless world of possibilities where I encountered many like-minded peoples with similar dreams. Out of
-          curiosity I learned a lot about WHY's and HOW's of computer science.
+          &emsp; Once I passed out of high school I got admitted for bachelor's
+          degree in computer application. It opened me to an endless world of
+          possibilities where I encountered many like-minded peoples with
+          similar dreams. Out of curiosity I learned a lot about WHY's and HOW's
+          of computer science.
         </p>
         <blockquote>
           Curiosity kept me running.
@@ -108,11 +112,10 @@
 
 <script>
 import NavBar from "@/components/NavBar.vue";
-import linkshareimg from "@/assets/project1.jpg";
-import cryptorankimg from "@/assets/project2.jpg";
+import linkshareimg from "@/assets/urlshare.png";
+import cryptorankimg from "@/assets/cryptorank.png";
 import notebookimg from "@/assets/project3.jpg";
-import portfolioimg from "@/assets/project4.jpg";
-
+import portfolioimg from "@/assets/portfolio.png";
 export default {
   name: "Home",
   components: {
@@ -270,7 +273,7 @@ body {
 
 .bg-text .name {
   font-size: 2.8rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 100;
   color: #e4e403;
 }
@@ -340,7 +343,7 @@ body {
 }
 .aboutmewrapper .aboutmetitle {
   font-size: 2.5rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-top: 4rem;
   border-bottom: 2px solid #e4e403;
 }
@@ -367,7 +370,7 @@ blockquote {
 }
 .projectcontainer header p {
   font-size: 2.5rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-top: 4rem;
   border-bottom: 2px solid #e4e403;
 }
@@ -690,5 +693,4 @@ blockquote {
     font-size: 1rem;
   }
 }
-
 </style>
