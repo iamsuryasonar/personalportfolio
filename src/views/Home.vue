@@ -33,7 +33,7 @@
           curiosity I learned a lot about WHY's and HOW's of computer science.
         </p>
         <blockquote>
-          Curiocity kept me running.
+          Curiosity kept me running.
         </blockquote>
         <p>
           &emsp; Currently pursuing Master of Computer Application at Cotton
