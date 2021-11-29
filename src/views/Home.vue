@@ -305,7 +305,7 @@ body {
   height: auto;
   position: relative;
   z-index: 2;
-  background-color: #a93800;
+  background-color: #d154c2;
   clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 5vw), 0 100%);
   margin-bottom: -5vw;
 }
@@ -315,7 +315,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  color: #f1f1f1;
+  color: black;
 }
 .profilepicture img {
   margin-top: 8rem;
