@@ -157,7 +157,7 @@ export default {
             },
           ],
           image: cryptorankimg,
-          source_code: "https://www.instagram.com/CryptoRank.git",
+          source_code: "https://github.com/iamsuryasonar/CryptoRank.git",
           build_info: "Built using Java, XML, Volley library and Coincap Api.",
           title: "CryptoRank",
           description:
@@ -174,7 +174,7 @@ export default {
             },
           ],
           image: notebookimg,
-          source_code: "https://www.github.com/NoteBook.git",
+          source_code: "https://www.github.com/iamsuryasonar/NoteBook.git",
           build_info: "Built using Java, XML and Firebase Database.",
           title: "NoteBook",
           description:
