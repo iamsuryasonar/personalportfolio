@@ -90,7 +90,7 @@ export default {
   z-index: 222;
 }
 #navbar .nav-wrapper {
-  height: 20px;
+  height: 40px;
   width: auto;
   display: flex;
   flex-direction: row;
@@ -101,13 +101,13 @@ export default {
 
 #navbar p {
   cursor: pointer;
-  font-size: 1.4rem;
+  font-size: 2rem;
   color: #ffffff;
 }
 
 #navbar .name {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.6rem;
   color: #ffffff;
 }
 
@@ -202,7 +202,7 @@ export default {
   border-bottom: 2px solid #e4e403;
 }
 /* 700px and above */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 900px) {
   .menuoverlay {
     display: none;
   }
@@ -214,7 +214,7 @@ export default {
   }
 }
 /* 700px and below */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .menuiconwrapper {
     display: block;
   }
